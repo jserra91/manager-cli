@@ -1,0 +1,22 @@
+{
+  "name": "manager-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "config": "config"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "manager-cli-serra": "./bin/global.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "preferGlobal": true,
+  "dependencies": {
+    "eval": "^0.1.2"
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "actions": [
+        {
+            "id": 1,
+            "name": "generate",
+            "shortcut": "g",
+            "execute": "git",
+            "lib": "",
+            "parent": 0,
+            "childs": false
+        }
+    ]
+}
