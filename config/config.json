@@ -1,13 +1,14 @@
 {
-    "actions": [
-        {
-            "id": 1,
-            "name": "generate",
-            "shortcut": "g",
-            "execute": "git",
-            "lib": "",
-            "parent": 0,
-            "childs": false
-        }
-    ]
+  "actions": [
+    {
+      "id": 1,
+      "name": "generate",
+      "shortcut": "g",
+      "execute": "git clone https://github.com/jserra91/custom_rules_nodejs_and_vuejs C:\\vuejs\\example-output\\",
+      "lib": "",
+      "parent": 0,
+      "childs": false,
+      "helper": "This is a simple test helper"
+    }
+  ]
 }

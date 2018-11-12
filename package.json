@@ -5,10 +5,12 @@
   "main": "./lib/index.js",
   "directories": {
     "lib": "lib",
-    "config": "config"
+    "config": "config",
+    "utils": "utils"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install -g ."
   },
   "bin": {
     "manager-cli-serra": "./bin/global.js"
