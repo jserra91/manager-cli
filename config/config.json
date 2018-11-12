@@ -4,9 +4,39 @@
       "id": 1,
       "name": "generate",
       "shortcut": "g",
-      "execute": "git clone https://github.com/jserra91/custom_rules_nodejs_and_vuejs C:\\vuejs\\example-output\\",
+      "execute": "",
       "lib": "",
       "parent": 0,
+      "childs": true,
+      "helper": "This is a simple test helper"
+    },
+    {
+      "id": 2,
+      "name": "create",
+      "shortcut": "c",
+      "execute": "",
+      "lib": "",
+      "parent": 1,
+      "childs": true,
+      "helper": "This is a simple test helper"
+    },
+    {
+      "id": 3,
+      "name": "prepare",
+      "shortcut": "p",
+      "execute": "git clone https://github.com/jserra91/custom_rules_nodejs_and_vuejs C:\\vuejs\\example-output2\\",
+      "lib": "",
+      "parent": 1,
+      "childs": false,
+      "helper": "This is a simple test helper"
+    },
+    {
+      "id": 4,
+      "name": "now",
+      "shortcut": "n",
+      "execute": "git clone https://github.com/jserra91/custom_rules_nodejs_and_vuejs C:\\vuejs\\example-output\\",
+      "lib": "",
+      "parent": 2,
       "childs": false,
       "helper": "This is a simple test helper"
     }

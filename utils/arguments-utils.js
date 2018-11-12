@@ -5,7 +5,7 @@ exports.isFather = function (element) {
 }
 
 exports.isEmpty = function (element) {
-  return element === null || element === undefined;
+  return element === null || element === undefined || element === [];
 }
 
 exports.haveChildrens = function (element) {
@@ -38,7 +38,7 @@ exports.findElemenstByParent = function (actionsInput, parent) {
       output.push(element);
     }
   });
-  return output === [] : undefined ? output;
+  return output === [] ? undefined : output;
 }
 
 exports.findElementByName = function (actionsInput, inputName) {

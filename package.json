@@ -17,8 +17,5 @@
   },
   "author": "",
   "license": "ISC",
-  "preferGlobal": true,
-  "dependencies": {
-    "eval": "^0.1.2"
-  }
+  "preferGlobal": true
 }
