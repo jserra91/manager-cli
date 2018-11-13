@@ -5,40 +5,36 @@
       "name": "generate",
       "shortcut": "g",
       "execute": "",
-      "lib": "",
       "parent": 0,
       "childs": true,
-      "helper": "This is a simple test helper"
+      "helper": "This is a simple test helper1"
     },
     {
       "id": 2,
       "name": "create",
       "shortcut": "c",
       "execute": "",
-      "lib": "",
       "parent": 1,
       "childs": true,
-      "helper": "This is a simple test helper"
+      "helper": "This is a simple test helper2"
     },
     {
       "id": 3,
       "name": "prepare",
       "shortcut": "p",
-      "execute": "git clone https://github.com/jserra91/custom_rules_nodejs_and_vuejs C:\\vuejs\\example-output2\\",
-      "lib": "",
+      "execute": "mkdir C:\\Zurich\\prepare",
       "parent": 1,
       "childs": false,
-      "helper": "This is a simple test helper"
+      "helper": "This is a simple test helper3"
     },
     {
       "id": 4,
       "name": "now",
       "shortcut": "n",
-      "execute": "git clone https://github.com/jserra91/custom_rules_nodejs_and_vuejs C:\\vuejs\\example-output\\",
-      "lib": "",
+      "execute": "mkdir C:\\Zurich\\now",
       "parent": 2,
       "childs": false,
-      "helper": "This is a simple test helper"
+      "helper": "This is a simple test helper4"
     }
   ]
 }

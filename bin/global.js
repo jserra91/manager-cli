@@ -17,9 +17,6 @@ args.forEach(element => {
   argumentos.push(element);
 });
 
-// Displays the text in the console
-console.log('all args ' + args);
-
 /**
  * Validate actions
  */
@@ -30,7 +27,6 @@ myConfig['actions'].forEach(element => {
     name: element.name,
     shortcut: element.shortcut,
     execute: element.execute,
-    lib: element.lib,
     parent: element.parent,
     childs: element.childs,
     helper: element.helper
@@ -46,8 +42,8 @@ if (argumentos.length > 0) {
   /** esta vacio? */
   if (!utils.isEmpty(vparent)) {
     /** tiene hijos? */
-    if (!utils.haveChildrens(vparent) &&
-         argCount === argTotal) {
+    if (!utils.haveChildrens(vparent) ||
+      argCount === argTotal) {
       /** tiene algo para ejecutar? */
       if (utils.haveExecute(vparent)) {
         /** pues ejecuta!!!!!!!!!! */
@@ -56,14 +52,14 @@ if (argumentos.length > 0) {
         }
       } else {
         /** Si no hay script de ejecuccion... salta error */
-        utils.printErrorGeneral("No hay script de ejecuccion");
+        utils.printErrorGeneral("[001] No hay script de ejecuccion");
         return;
       }
     } else {
       logical.executeChildLogical(argCount, argTotal, argumentos, vparent, actions);
     }
   } else {
-    utils.printErrorGeneral("No hay commando de ejecuccion");
+    utils.printErrorGeneral("[002] No hay commando de ejecuccion");
     return;
   }
 }
