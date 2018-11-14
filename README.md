@@ -6,7 +6,7 @@ Manager-cli is a custom manager command based in NodeJs. It can be configured wi
 * [2 Install from npm](#2)
 * [3 JSON](#3)
 
-## <a name="1"></a>1 Downdload from Github
+## <a name="1"></a>1 Download from Github
 
 ```shell
 git clone https://github.com/jserra91/manager-cli.git
