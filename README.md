@@ -21,7 +21,7 @@ npm i -g manager-cli
 ```
 
 ## <a name="3"></a>3 JSON
-In the user folder create a <b>manager-cli.json.json</b> with this strcture:
+In the user folder create a <b>manager-cli.json</b> with this strcture:
 
 ```typescript
 {
