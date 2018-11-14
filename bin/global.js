@@ -6,7 +6,7 @@ var utils = require('../utils/arguments-utils');
 var logical = require('../utils/logical-module');
 
 // config
-var myConfig = JSON.parse(fs.readFileSync('./config/config.json', 'utf8'));
+var myConfig = JSON.parse(fs.readFileSync('%userprofile%/manager-cli.json', 'utf8'));
 
 // Delete the 0 and 1 argument (node and module script)
 var args = process.argv.splice(process.execArgv.length + 2);

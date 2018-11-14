@@ -1,56 +1,45 @@
 # manager-cli
-Manager-cli es un gestor personalizado vía comandos hecho con Node. En él se puede configurar con un único JSON y a partir de él, genera todos los posibles comandos. Se instala como un modulo global.
+Manager-cli is a custom manager command based in NodeJs. It can be configured with a single JSON and from it, generates all possible commands. It's installed as a global module. 
 
 ## Contents
-* [1 Create module](#1)
-* [2 Personalize](#2)
+* [1 Download from Github](#1)
+* [2 Install from npm](#2)
 * [3 JSON](#3)
 
-## <a name="1"></a>1 Create module
+## <a name="1"></a>1 Downdload from Github
 
 ```shell
+git clone https://github.com/jserra91/manager-cli.git
+cd manager-cli
 npm i && npm run build
 ```
 
-## <a name="2"></a>2 Personalize
-Dentro del package.json hay el BIN y como quieres que se llame el modulo.
-
-```typescript
-{
-  ...
-  "bin": {
-    "manager-cli-serra": "./bin/global.js"
-  },
-  ...
-}
-```
-
-Si lo editas y introduces "manager-helloWorld" el comando para ejecutar el gestor será:
+## <a name="2"></a>2 Install from npm (not working)
 
 ```shell
-manager-helloWorld
+npm i -g manager-cli
 ```
 
 ## <a name="3"></a>3 JSON
-Dentro de la carpeta config hay un JSON con diferentes parametros para introducir.
+In a user folder create a <b>manager-cli.json.json<b> with this strcture:
 
 ```typescript
 {
   "actions": [
     {
-      "id": 1, <- ID unico
-      "name": "generate", <- Comando para ejecutar
-      "shortcut": "g", <- shortcut
-      "execute": "", <- comando interno de ejecuccion
-      "parent": 0, <- Padre
-      "childs": false, <- Tiene hijos?
-      "helper": "This is a simple test helper1" <- Ayuda
+      "id": 1, <- Unique ID
+      "name": "generate", <- Command
+      "shortcut": "g", <- Shortcut
+      "execute": "", <- Internal execute command
+      "parent": 0, <- Parent
+      "childs": false, <- have childs?
+      "helper": "This is a simple test helper1" <- Helped
     },
   ]
 }
 ```
 
-Un ejemplo:
+For example:
 ```typescript
 {
   "actions": [
@@ -93,7 +82,7 @@ Un ejemplo:
   ]
 }
 ```
-Con este ejemplo puedes ejecutar los comandos:
+With this example you can execute this commands:
 
 ```shell
 manager-cli-serra generate create now
@@ -102,9 +91,9 @@ manager-cli-serra generate create now
 ```shell
 manager-cli-serra generate prepare
 ```
-En el primer comando crea una carpeta dentro de "C:\Serra\" que se llama "now". La segunda crea la carpeta "prepare".
+With first command create a folder <b>now</b> in <b>C:\Serra\</b>. With second command create folder <b>prepare</b>
 
-O sus shortcuts
+Or with shortcuts:
 
 ```shell
 manager-cli-serra g c n
