@@ -91,7 +91,7 @@ manager-cli-serra generate create now
 ```shell
 manager-cli-serra generate prepare
 ```
-With first command create a folder <b>now</b> in <b>C:\Serra\</b>. With second command create folder <b>prepare</b>
+With first command create a folder <b>now</b> in <b>C:\Serra\ </b>. With second command create folder <b>prepare</b>
 
 Or with shortcuts:
 
