@@ -5,8 +5,8 @@ var fs = require('fs'); // read files
 var utils = require('../utils/arguments-utils');
 var logical = require('../utils/logical-module');
 
-// config
-var myConfig = JSON.parse(fs.readFileSync('%userprofile%/manager-cli.json', 'utf8'));
+// https://stackoverflow.com/questions/53322117/nodejs-javascript-readfilesync
+var myConfig = JSON.parse(fs.readFileSync(process.env.USERPROFILE + '/manager-cli.json', 'utf8'));
 
 // Delete the 0 and 1 argument (node and module script)
 var args = process.argv.splice(process.execArgv.length + 2);

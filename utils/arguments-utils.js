@@ -1,4 +1,4 @@
-const { exec } = require('child_process');
+const { exec, execSync } = require('child_process');
 
 exports.isFather = function (element) {
   return element.parent === 0;
