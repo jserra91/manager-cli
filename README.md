@@ -6,7 +6,7 @@ Manager-cli is a custom manager command based in NodeJs. It can be configured wi
 * [2 Install from npm](#2)
 * [3 JSON](#3)
 
-## <a name="1"></a>1 Downdload from Github
+## <a name="1"></a>1 Download from Github
 
 ```shell
 git clone https://github.com/jserra91/manager-cli.git
@@ -21,7 +21,7 @@ npm i -g manager-cli
 ```
 
 ## <a name="3"></a>3 JSON
-In a user folder create a <b>manager-cli.json.json</b> with this strcture:
+In the user folder create a <b>manager-cli.json</b> with this strcture:
 
 ```typescript
 {
@@ -91,7 +91,7 @@ manager-cli-serra generate create now
 ```shell
 manager-cli-serra generate prepare
 ```
-With first command create a folder <b>now</b> in <b>C:\Serra\</b>. With second command create folder <b>prepare</b>
+With first command create a folder <b>now</b> in <b>C:\Serra\ </b>. With second command create folder <b>prepare</b>
 
 Or with shortcuts:
 
