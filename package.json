@@ -1,5 +1,5 @@
 {
-  "name": "zurich-cli",
+  "name": "manager-cli",
   "version": "1.0.0",
   "description": "",
   "main": "./lib/index.js",
@@ -13,7 +13,7 @@
     "build": "npm install -g ."
   },
   "bin": {
-    "zurich-cli": "./bin/global.js"
+    "manager-cli": "./bin/global.js"
   },
   "author": "",
   "license": "ISC",
