@@ -1,5 +1,5 @@
 {
-  "name": "manager-cli",
+  "name": "zurich-cli",
   "version": "1.0.0",
   "description": "",
   "main": "./lib/index.js",
@@ -13,7 +13,7 @@
     "build": "npm install -g ."
   },
   "bin": {
-    "manager-cli-serra": "./bin/global.js"
+    "zurich-cli": "./bin/global.js"
   },
   "author": "",
   "license": "ISC",

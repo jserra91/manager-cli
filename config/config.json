@@ -2,39 +2,21 @@
   "actions": [
     {
       "id": 1,
-      "name": "generate",
-      "shortcut": "g",
-      "execute": "",
-      "parent": 0,
-      "childs": true,
-      "helper": "This is a simple test helper1"
-    },
-    {
-      "id": 2,
       "name": "create",
       "shortcut": "c",
       "execute": "",
-      "parent": 1,
+      "parent": 0,
       "childs": true,
       "helper": "This is a simple test helper2"
     },
     {
-      "id": 3,
-      "name": "prepare",
-      "shortcut": "p",
-      "execute": "mkdir C:\\Zurich\\prepare",
+      "id": 2,
+      "name": "library",
+      "shortcut": "l",
+      "execute": "",
       "parent": 1,
-      "childs": false,
-      "helper": "This is a simple test helper3"
-    },
-    {
-      "id": 4,
-      "name": "now",
-      "shortcut": "n",
-      "execute": "mkdir C:\\Zurich\\now",
-      "parent": 2,
-      "childs": false,
-      "helper": "This is a simple test helper4"
+      "childs": true,
+      "helper": "cd C:\\Zurich"
     }
   ]
 }

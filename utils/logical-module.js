@@ -7,7 +7,7 @@ exports.executeChildLogical = function (argCount, argTotal, argumentos, element,
     utils.printErrorGeneral("[003] No tiene hijos!");
     return;
   }
-  const vchild = utils.findElementByName(vchilds, argumentos[argCount]);
+  const vchild = utils.findElementByName(vchilds, argumentos[argCount], element.id);
   /** no estan vacios */
   if (!utils.isEmpty(vchild)) {
     /** miramos si es el argumento final */
@@ -16,6 +16,7 @@ exports.executeChildLogical = function (argCount, argTotal, argumentos, element,
       if (utils.haveExecute(vchild)) {
         /** pues ejecuta!!!!!!!!!! */
         if (!utils.execute(vchild)) {
+          console.log('error');
           return;
         }
       } else {

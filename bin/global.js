@@ -38,7 +38,7 @@ if (argumentos.length > 0) {
   let argCount = 1;
   let argTotal = argumentos.length;
   /** find first parent */
-  const vparent = utils.findElementByName(actions, argumentos[0]);
+  const vparent = utils.findElementByName(actions, argumentos[0], 0);
   /** esta vacio? */
   if (!utils.isEmpty(vparent)) {
     /** tiene hijos? */

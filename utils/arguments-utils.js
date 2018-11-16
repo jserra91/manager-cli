@@ -41,11 +41,12 @@ exports.findElemenstByParent = function (actionsInput, parent) {
   return output === [] ? undefined : output;
 }
 
-exports.findElementByName = function (actionsInput, inputName) {
+exports.findElementByName = function (actionsInput, inputName, parent) {
   let output = undefined;
   actionsInput.forEach(element => {
-    if (element.name === inputName ||
-      element.shortcut === inputName) {
+    if ((element.name === inputName ||
+      element.shortcut === inputName) &&
+      element.parent === parent) {
       output = element;
       return output;
     }
@@ -70,11 +71,14 @@ exports.printErrorExecute = function (element, msg) {
 }
 
 exports.execute = function (element) {
-  exec(element.execute, (err, stdout, stderr) => {
-    if (err) {
-      console.error(err);
-      return false;
-    }
-    return true;
-  });
+  try {
+    var process = exec(element.execute);
+    process.stdout.on('data', function (data) { console.log(data); });
+    process.stderr.on('data', function (data) { console.log('error: ' + data); });
+    process.on('exit', function (code) { console.log('finished'); });
+  } catch (e) {
+    console.error(e);
+    return false;
+  }
+  return true;
 }
