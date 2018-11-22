@@ -1,6 +1,6 @@
 {
   "name": "manager-cli",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "./lib/index.js",
   "directories": {
@@ -10,12 +10,18 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install -g ."
+    "build": "npm install -g .",
+    "upload": "npm login && npm publish dist"
   },
   "bin": {
     "manager-cli": "./bin/global.js"
   },
-  "author": "",
+  "author": "Jordi Serra (jserra91@gmail.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jserra91/manager-cli"
+  },
+  "homepage": "http://www.jordiserragonzalez.com",
   "license": "ISC",
   "preferGlobal": true
 }

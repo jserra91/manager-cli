@@ -5,6 +5,10 @@ Manager-cli is a custom manager command based in NodeJs. It can be configured wi
 * [1 Download from Github](#1)
 * [2 Install from npm](#2)
 * [3 JSON](#3)
+* [4 Other examples](#4)
+* [4.1 For developers](#4.1)
+* [4.2 For your company](#4.1)
+* [5 Thanks to...](#5)
 
 ## <a name="1"></a>1 Download from Github
 
@@ -14,7 +18,7 @@ cd manager-cli
 npm i && npm run build
 ```
 
-## <a name="2"></a>2 Install from npm (not working)
+## <a name="2"></a>2 Install from npm
 
 ```shell
 npm i -g manager-cli
@@ -85,21 +89,187 @@ For example:
 With this example you can execute this commands:
 
 ```shell
-manager-cli-serra generate create now
+manager-cli generate create now
 ```
 
 ```shell
-manager-cli-serra generate prepare
+manager-cli generate prepare
 ```
 With first command create a folder <b>now</b> in <b>C:\Serra\ </b>. With second command create folder <b>prepare</b>
 
 Or with shortcuts:
 
 ```shell
-manager-cli-serra g c n
+manager-cli g c n
 ```
 
 ```shell
-manager-cli-serra g p
+manager-cli g p
 ```
 
+## <a name="4"></a>4 Other examples
+
+## <a name="4.1"></a>4.1 For developers
+<details>
+
+```typescript
+{
+  "actions": [
+    {
+      "id": 1,
+      "name": "create",
+      "shortcut": "c",
+      "execute": "",
+      "parent": 0,
+      "childs": true,
+      "helper": "This is a simple test helper2"
+    },
+	{
+      "id": 2,
+      "name": "vuejs",
+      "shortcut": "v",
+      "execute": "",
+      "parent": 1,
+      "childs": true,
+      "helper": "This is a simple test helper2"
+    },
+	{
+      "id": 5,
+      "name": "application",
+      "shortcut": "a",
+      "execute": "cd C:\\vuejs && vue create application-example -d",
+      "parent": 2,
+      "childs": false,
+      "helper": "test helper"
+    },
+	{
+      "id": 9,
+      "name": "angular",
+      "shortcut": "a",
+      "execute": "",
+      "parent": 1,
+      "childs": true,
+      "helper": "T"
+    },
+    {
+      "id": 10,
+      "name": "project",
+      "shortcut": "p",
+      "execute": "cd C:\\angular && ng new project angular-test",
+      "parent": 2,
+      "childs": false,
+      "helper": ""
+    },
+	{
+      "id": 11,
+      "name": "install",
+      "shortcut": "a",
+      "execute": "npm i -g @angular/cli && npm i -g vue-cli",
+      "parent": 1,
+      "childs": false,
+      "helper": "T"
+    }
+  ]
+}
+```
+
+Commands:
+```shell
+manager-cli c v a    <- Create Vuejs project
+manager-cli create vuejs application    <- Create Vuejs project
+manager-cli c a p    <- Create Angular project
+manager-cli create angular project    <- Create Angular project
+manager-cli install    <- Install @angular/cli and vue-cli (global)
+```
+</details>
+
+## <a name="4.1"></a>4.2 For your company
+<details>
+
+Download from Git and modify "bin" in package.json
+```typescript
+  ...
+  "bin": {
+    "my-company": "./bin/global.js"
+  },
+  ...
+```
+
+and upload in your repo
+```shell
+  npm login && npm publish
+```
+
+```typescript
+{
+  "actions": [
+    {
+      "id": 1,
+      "name": "create",
+      "shortcut": "c",
+      "execute": "",
+      "parent": 0,
+      "childs": true,
+      "helper": "This is a simple test helper2"
+    },
+	{
+      "id": 2,
+      "name": "vuejs",
+      "shortcut": "v",
+      "execute": "",
+      "parent": 1,
+      "childs": true,
+      "helper": "This is a simple test helper2"
+    },
+	{
+      "id": 5,
+      "name": "application",
+      "shortcut": "a",
+      "execute": "cd C:\\vuejs && vue create application-example -d",
+      "parent": 2,
+      "childs": false,
+      "helper": "test helper"
+    },
+	{
+      "id": 9,
+      "name": "angular",
+      "shortcut": "a",
+      "execute": "",
+      "parent": 1,
+      "childs": true,
+      "helper": "T"
+    },
+    {
+      "id": 10,
+      "name": "project",
+      "shortcut": "p",
+      "execute": "cd C:\\angular && ng new project angular-test",
+      "parent": 2,
+      "childs": false,
+      "helper": ""
+    },
+	{
+      "id": 11,
+      "name": "install",
+      "shortcut": "a",
+      "execute": "npm i -g @angular/cli && npm i -g vue-cli",
+      "parent": 1,
+      "childs": false,
+      "helper": "T"
+    }
+  ]
+}
+```
+
+Commands:
+```shell
+my-company c v a    <- Create Vuejs project
+my-company create vuejs application    <- Create Vuejs project
+my-company c a p    <- Create Angular project
+my-company create angular project    <- Create Angular project
+my-company install    <- Install @angular/cli and vue-cli (global)
+```
+</details>
+
+## <a name="5"></a>5. Thanks to...
+- Martin (stackoverflow) https://stackoverflow.com/questions/53322117/nodejs-javascript-readfilesync
